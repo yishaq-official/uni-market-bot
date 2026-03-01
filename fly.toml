@@ -1,0 +1,19 @@
+# fly.toml app configuration file generated for university-market-bot on 2026-01-28T12:15:27+03:00
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
+
+app = 'university-market-bot'
+primary_region = 'ams'
+
+[build]
+
+
+[[vm]]
+  memory = '1gb'
+  cpus = 1
+  memory_mb = 1024
+
+[mounts]
+  source = "market_data"
+  destination = "/app/data"
